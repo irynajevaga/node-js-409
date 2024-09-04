@@ -9,7 +9,7 @@ const BlockFriends = () => {
     useEffect(() => {
         fetch("http://localhost:3001/")
             .then(res => res.json())
-            .then((data) => {setFriends(data)})
+            .then((data) => {setFriends(data)}) // [{},{},{},{}]
             .catch((err) => console.log(err));
     }, [])
     return (
