@@ -29,10 +29,10 @@ const Pirates = sequelize.define('Pirates', {
         type: DataTypes.STRING,
         allowNull: false
     },
-    createdAt: {
-        type: DataTypes.DATE,
-        defaultValue: DataTypes.NOW
-    },
+    // createdAt: {
+    //     type: DataTypes.DATE,
+    //     defaultValue: DataTypes.NOW
+    // },
     updateAt: {
         type: DataTypes.DATE,
         defaultValue: DataTypes.NOW

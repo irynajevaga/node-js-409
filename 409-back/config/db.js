@@ -1,3 +1,5 @@
+
+
 // Импорт модулей
 import { Sequelize } from 'sequelize'
 import configData from './config.json' assert {type: 'json'}
@@ -12,8 +14,12 @@ const sequelize = new Sequelize(
     {
         host: config.host,
         dialect: config.dialect,
-        port: '3306'
+        
     }
 )
+
+sequelize.sync({ force: false }).then(() => {
+    console.log('Table created successfully');
+  });
 
 export default sequelize;
